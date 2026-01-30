@@ -1,3 +1,3 @@
-export const Testimonial = () =>{
+export const Testimonials = () =>{
     return <section></section>
 }
