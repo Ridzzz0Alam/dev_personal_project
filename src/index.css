@@ -23,18 +23,18 @@
   --color-surface: #1a2329;
 }
 
-@layer base{
-  html{
+@layer base {
+  html {
     scroll-behavior: smooth;
   }
 
-  body{
+  body {
     background-color: var(--color-background);
-    color: var(--color-background);
-    font-family: "Inter",sans-serif;
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
   }
 
-  .font-serif{
+  .font-serif {
     font-family: "Playfair Display", serif;
   }
 }
