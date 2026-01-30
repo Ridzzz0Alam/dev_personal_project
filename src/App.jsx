@@ -3,8 +3,9 @@ function App() {
   
 
   return (
-    <>     
-    </>
+    <div className="min-h-screen overflow-x-hidden">
+      <main></main>
+    </div>
   )
 }
 
