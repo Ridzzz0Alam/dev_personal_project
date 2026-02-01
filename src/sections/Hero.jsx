@@ -41,8 +41,8 @@ export const Hero = () =>{
                         </div>
 
                         {/* Headline */}
-                        <div>
-                            <h1>
+                        <div className="space-y-4">
+                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                                 Crafting <span className="text-primary glow-text">digital</span>
                                 <br />
                                 experiences with
@@ -51,6 +51,11 @@ export const Hero = () =>{
                                     precision.
                                 </span>
                             </h1>
+                            <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200 animation-delay-200">
+                                Hi, I'm Pedro Machado — a software engineer specializing in
+                                React, Next.js, and TypeScript. I build scalable, performant web
+                                applications that users love.
+                            </p>
                         </div>
                     </div>
                     {/* Right Column - Text Content */}
