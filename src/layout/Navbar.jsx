@@ -1,3 +1,4 @@
+import { Button } from "../components/Button";
 
 const navLinks = [
     {href: "#about",label:"About"},
@@ -30,7 +31,7 @@ export const Navbar = () =>{
 
             {/* CTA Button */}
             <div>
-                <Button></Button>
+                <Button>Contact Me</Button>
             </div>
         </nav>
     </header>
