@@ -19,9 +19,42 @@ export const Hero = () =>{
                     backgroundColor: "#20B2A6",
                     left: `${Math.random() * 100}%`,
                     top:`${Math.random() * 100}%`,
+                    animation: `slow-drift ${
+                        15 + Math.random() * 20
+                    }s ease-in-out infinite`,
+                    animationDelay: `${Math.random() * 5}`,
                 }}
-                />
-               ))} 
+             />
+            ))} 
+            </div>
+
+            {/* Content */}
+            <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Left Column - Text Content  */}
+                    <div className="space-y-8">
+                        <div className="animate-fade-in">
+                            <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
+                                <span className="w-2 h-2 bg-primary rounded-full animate-pulse"/>
+                                    Engineer * DevOps Specialist
+                            </span>
+                        </div>
+
+                        {/* Headline */}
+                        <div>
+                            <h1>
+                                Crafting <span className="text-primary glow-text">digital</span>
+                                <br />
+                                experiences with
+                                <br />
+                                <span className="font-serif italic font-normal text-white">
+                                    precision.
+                                </span>
+                            </h1>
+                        </div>
+                    </div>
+                    {/* Right Column - Text Content */}
+                </div>
             </div>
         </section>
     );
