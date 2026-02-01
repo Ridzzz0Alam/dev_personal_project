@@ -1,5 +1,6 @@
-import { Button } from "../components/Button";
 import { Menu } from "lucide-react";
+import { Button } from "../components/Button";
+
 const navLinks = [
     {href: "#about",label:"About"},
     {href: "#projects",label:"Projects"},
@@ -36,9 +37,24 @@ export const Navbar = () =>{
 
             {/* Mobile Menu Button */}
             <button className="md:hidden p-2 text-foreground">
-                <Menu/>
+                <Menu size={24}/>
             </button>
         </nav>
+
+        {/* Mobile Menu */}
+            <div className="md:hidden glass-strong">
+                <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+                    {navLinks.map((link, index) =>(
+                        <a 
+                            href={link.href}
+                            key={index}
+                            className="text-lg text-muted-foreground hover:text-foreground py-2"
+                        >
+                        {link.label}
+                    </a>
+                    ))}
+                </div>
+            </div>
     </header>
     );
 }
