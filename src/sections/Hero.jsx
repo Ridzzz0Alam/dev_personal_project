@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Twitter } from "lucide-react";
 import { Button } from "../components/Button";
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
@@ -64,11 +64,28 @@ export const Hero = () =>{
                         </div>
 
                         {/* CTAs */}
-                        <div>
+                        <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
                             <Button size="lg">
                                 Contact Me <ArrowRight className="w-5 h-5"/>
                             </Button>
                             <AnimatedBorderButton/>
+                        </div>
+
+                        {/* Social Links */}
+                        <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+                            <span className="text-sm text-muted-foreground">Follow: </span>
+                            {[
+                                {icon: Github, href: "#"},
+                                {icon: Linkedin, href: "#"},
+                                {icon: Twitter, href: "#"},
+                            ].map((social, idx) => (
+                                <a 
+                                key={idx} 
+                                href={social.href}
+                                className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                                >
+                                    {<social.icon/>}</a>
+                            ))}
                         </div>
                     </div>
                     {/* Right Column - Text Content */}
