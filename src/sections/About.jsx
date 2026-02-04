@@ -1,3 +1,20 @@
+import { Code2, Rocket } from "lucide-react"
+
+const highlights = [
+    {
+        icon: Code2,
+        title: "Clean Code",
+        description:
+            "Writing maintable, scalable code that stands the test of time.",
+    },
+    {
+        icon: Rocket,
+        title: "Performance",
+        description:
+            "Optimizing for speed and delivering lightning-fast user expereince."
+    }
+]
+
 export const About = () =>{
     return(
         <section id="about" className="py-32 relative overflow-hidden"> 
@@ -51,13 +68,14 @@ export const About = () =>{
 
                 {/* Right Column - Highlights */}
                 <div className="grid sm:grid-cols-2 gap-6">
-                    {HighlightRegistry.map((item, idx) => (
+                    {highlights.map((item, idx) => (
                         <div
                         key={idx}
                         className="glass p-6 rounded-2xl animate-fade-in"
                         style={{animationDelay: `${(idx + 1) * 100}ms` }}
                         >
                             <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                            
                             </div>
                         </div> 
                     ))}
