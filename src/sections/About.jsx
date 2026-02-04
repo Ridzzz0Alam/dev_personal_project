@@ -39,7 +39,30 @@ export const About = () =>{
                             the developer community.
                         </p>
                     </div>
+
+                    <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
+                        <p className="text-lg font-medium italic text-foreground">
+                            "My mission is to create digital experience that are not justif
+                            fucntional,but truly delightful - products that users love to
+                            use and developers love to maintain."
+                        </p>
+                    </div>
                 </div>
+
+                {/* Right Column - Highlights */}
+                <div className="grid sm:grid-cols-2 gap-6">
+                    {HighlightRegistry.map((item, idx) => (
+                        <div
+                        key={idx}
+                        className="glass p-6 rounded-2xl animate-fade-in"
+                        style={{animationDelay: `${(idx + 1) * 100}ms` }}
+                        >
+                            <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20">
+                            </div>
+                        </div> 
+                    ))}
+                </div>
+
                 </div>
             </div>
         </section>
