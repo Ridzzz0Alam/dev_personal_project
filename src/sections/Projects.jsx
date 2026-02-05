@@ -71,6 +71,16 @@ export const Projects = () =>{
                                     style={{animationDelay: `${(idx+1)*100}ms` }}
                                 > 
                                 {/* Image */}
+                                <div className="relative overflow-hidden aspect-video">
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover transition-transfrom duration-700 group-hover:scale-110"
+                                    />
+                                    <div
+                                        className="absolute inset-0 bg-gradient-0-to-t from-card via-card/50 to-transparent opacity-60"
+                                    />
+                                </div>
                                 </div>
                             ))}
                         </div>
