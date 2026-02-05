@@ -47,17 +47,36 @@ export const Projects = () =>{
             <div>
                 <div>
                     <div>
+                        {/* Section Header */}
+                        <div>
+                            <span>
+                                Featured Work
+                            </span>
+                            <h2>
+                                Projects that
+                                <span>
+                                    {" "}
+                                    make an impact.
+                                </span>
+                            </h2>
+                            <p>
+                                A selection of my recent work, from complex web applications to
+                                innovative tools that solve real-world problems
+                            </p>
+                        </div>
 
-                    </div>
-
-                    {/* View All CTA */}
-                    <div>
-                        <AnimatedBorderButton>
-                            View All Projects
-                            <ArrowUpRight className="w-5 h-5"/>
-                        </AnimatedBorderButton>
+                        {/* Projects Grid */}
                     </div>
                 </div>  
+
+                
+                {/* View All CTA */}
+                <div>
+                    <AnimatedBorderButton>
+                        View All Projects
+                        <ArrowUpRight className="w-5 h-5"/>
+                    </AnimatedBorderButton>
+                </div>
             </div>      
         </section>
     );
