@@ -78,8 +78,14 @@ export const Projects = () =>{
                                         className="w-full h-full object-cover transition-transfrom duration-700 group-hover:scale-110"
                                     />
                                     <div
-                                        className="absolute inset-0 bg-gradient-0-to-t from-card via-card/50 to-transparent opacity-60"
+                                        className="absolute inset-0 
+                                        bg-gradient-0-to-t from-card via-card/50 
+                                        to-transparent opacity-60"
                                     />
+                                    {/* Overlay Links */}
+                                    <div>
+                                        
+                                    </div>
                                 </div>
                                 </div>
                             ))}
