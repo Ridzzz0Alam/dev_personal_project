@@ -1,3 +1,5 @@
+import { ArrowUpRight, Github } from "lucide-react";
+
 const projects = [
   {
     title: "Fintech Dashboard",
@@ -84,15 +86,37 @@ export const Projects = () =>{
                                     />
                                     {/* Overlay Links */}
                                     <div>
-                                        
+                                        <div>
+                                            <a 
+                                                href={project.link}
+                                                className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                                            >
+                                                <ArrowUpRight className="w-5 h-5"/>
+                                            </a>
+                                            <a 
+                                                href={project.link}
+                                                className="p-3 rounded-full glass hover:bg-primary hover:text-primary-foreground transition-all"
+                                            >
+                                                <Github className="w-5 h-5"/>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    {/* Content */}
+                                    <div className="p-6 space-y-4">
+                                        <div className="flex items-start justify-between">
+                                            <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">
+                                                {project.title}
+                                            </h3>
+                                        </div>    
                                     </div>
                                 </div>
-                                </div>
-                            ))}
-                        </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-        </section>
-    )
-}
+        </div>
+    </section>
+    );
+};
