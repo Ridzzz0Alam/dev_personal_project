@@ -1,9 +1,48 @@
+const projects = [
+  {
+    title: "Fintech Dashboard",
+    description:
+      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
+    image: "/projects/project1.png",
+    tags: ["React", "Typescript", "NodeJS"],
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "E-Commerce Platform",
+    description:
+      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+    image: "/projects/project2.png",
+    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "AI Writing Assistant",
+    description:
+      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
+    image: "/projects/project3.png",
+    tags: ["React", "OpenAI", "Python", "FastAPI"],
+    link: "#",
+    github: "#",
+  },
+  {
+    title: "Project Management Tool",
+    description:
+      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
+    image: "/projects/project4.png",
+    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
+    link: "#",
+    github: "#",
+  },
+];
+
 export const Projects = () =>{
     return (
         <section id="projects" className="py-32 relative overflow-hidden">
             {/* Bg Glows */}
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl">
-                <div className="absolute bottom-1/4 left-0 w-64 h-64 bg-highlight/5 rounded-full blur-3xl">
+            <div >
+                <div >
                     <div className="container mx-auto px-6 relative z-10">
                         {/* Section Header */}
                         <div className="text-center mx-auto max-w-3xl mb-16">
@@ -17,6 +56,23 @@ export const Projects = () =>{
                                     make an impact.
                                 </span>
                             </h2>
+                            <p>
+                                A Selection of my recent work, from complex web aplications to
+                                innovative tools that solve real-world problems.
+                            </p>
+                        </div>
+
+                        {/* Projects Grid */}
+                        <div>
+                            {projects.map((project,idx) => (
+                                <div
+                                    key={idx}
+                                    className="group class rounded-2xl overflow-hidden animate-fade-in md:row-span-1"
+                                    style={{animationDelay: `${(idx+1)*100}ms` }}
+                                > 
+                                {/* Image */}
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>
