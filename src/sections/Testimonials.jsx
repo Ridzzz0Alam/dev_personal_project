@@ -96,6 +96,22 @@ export const Testimonials = () =>{
                         <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4">
                             "{testimonials[activateIdx].quote}"
                         </blockquote>
+
+                        <div className="flex items-center gap-4">
+                            <img
+                                src={testimonials[activateIdx].avatar}
+                                alt={testimonials[activateIdx].author}
+                                className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
+                            />
+                        </div>
+                        <div>
+                            <div className="font-semibold">
+                                {testimonials[activateIdx].author}
+                            </div>
+                            <div className="text-sm text-muted-foreground">
+                                {testimonials[activateIdx].role}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
