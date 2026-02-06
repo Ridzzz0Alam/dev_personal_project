@@ -1,3 +1,4 @@
+import { Quote } from "lucide-react";
 
 
 const testimonials = [
@@ -66,9 +67,19 @@ export const Testimonials = () =>{
                         className="font-serif italic
                         font-normal text-white"
                         >
-                            amazing people
+                            amazing people.
                         </span>
                     </h2>
+                </div>
+
+                {/* Testimonial Carousel */}
+                <div className="max-w-4xl mx-auto">
+                    <div className="relative">
+                        {/* Main Testimonial */}
+                        <div className="glass p-8 rounded-3xl md:p-12 glow-border animate-fade-in animation-delay-200">
+                            <Quote className="w-6 h-6 text-primary-foreground"/>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
