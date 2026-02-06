@@ -1,4 +1,4 @@
-import { Quote } from "lucide-react";
+import { ChevronLeft, Quote } from "lucide-react";
 import { useState } from "react";
 
 
@@ -113,6 +113,16 @@ export const Testimonials = () =>{
                             </div>
                         </div>
                     </div>
+                </div>
+
+                {/* Testimonials Navigation */}
+                <div>
+                    <button 
+                        className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                        onClick={previous}    
+                    >
+                        <ChevronLeft />
+                    </button>
                 </div>
             </div>
         </section>
