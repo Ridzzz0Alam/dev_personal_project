@@ -44,6 +44,12 @@ export const Testimonials = () =>{
         setActiveIdx((prev) => (prev + 1) % testimonials.length);
     }
 
+    const previous = () => {
+        setActiveIdx(
+            (prev) => (prev - 1 + testimonials.length) % testimonials.length
+        );
+    }
+
     return (
         <section id="testimonials" className="py-32 relative overflow-hidden">
             <div
