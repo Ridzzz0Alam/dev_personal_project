@@ -1,4 +1,5 @@
 import { Quote } from "lucide-react";
+import { useState } from "react";
 
 
 const testimonials = [
@@ -37,6 +38,12 @@ const testimonials = [
 ];
 
 export const Testimonials = () =>{
+    const [activateIdx, setActiveIdx]=useState(0);
+
+    const next = () =>{
+        setActiveIdx((prev) => (prev + 1) % testimonials.length);
+    }
+
     return (
         <section id="testimonials" className="py-32 relative overflow-hidden">
             <div
@@ -79,6 +86,10 @@ export const Testimonials = () =>{
                         <div className="glass p-8 rounded-3xl md:p-12 glow-border animate-fade-in animation-delay-200">
                             <Quote className="w-6 h-6 text-primary-foreground"/>
                         </div>
+
+                        <blockquote className="text-xl md:text-2xl font-medium leading-relaxed mb-8 pt-4">
+                            "{testimonials[activateIdx].quote}"
+                        </blockquote>
                     </div>
                 </div>
             </div>
