@@ -43,8 +43,20 @@ export const Testimonials = () =>{
                 w-[800px] h-[800px] bg-primary/5
                 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"
             />
-            <div>
-                
+            <div className="container mx-auto 
+            px-6 relative z-10
+            ">
+                {/* Section Header */}
+                <div className="text-center max-w-3xl
+                mx-auto mb-16"
+                >
+                    <span className="text-secondary-foreground
+                    text-sm font-medium tracking-wider
+                    uppercase animate-fade-in"
+                    >
+                        What People say
+                    </span>
+                </div>
             </div>
         </section>
          
