@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
 
 
 const contactInfo = [
@@ -24,6 +25,16 @@ const contactInfo = [
 
 
 export const Contact = () =>{
+    const [formData, setFormData] = useState({
+        name: "",
+        email: "",
+        message: "",
+    });
+    const [isLoading,setIsLoading] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState({
+        type: null,
+        message: "",
+    });
     return (
         <section id="contact" className="py-32 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
