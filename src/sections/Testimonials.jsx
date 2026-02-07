@@ -115,6 +115,36 @@ export const Testimonials = () =>{
                             </div>
                         </div>
                     </div>
+
+                    {/* Testimonials Navigation */}
+                <div className="flex items-center justify-center gap-4 mt-8">
+                    <button 
+                        className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                        onClick={previous}    
+                    >
+                        <ChevronLeft />
+                    </button>
+
+                    <div className="flex gap-2">
+                        {testimonials.map((_, idx) => (
+                            <button
+                                onClick={() => setActiveIdx(idx)}
+                                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                                    idx === activateIdx
+                                    ? "w-8 bg-primary"
+                                    : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
+                                }`}
+                            />
+                        ))}
+                    </div>
+
+                    <button
+                    onClick={next}
+                    className="p-3 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all"
+                    >
+                        <ChevronRight/>
+                    </button>
+                </div>
                 </div>
             </div>
         </section>
