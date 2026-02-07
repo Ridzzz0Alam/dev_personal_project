@@ -144,6 +144,25 @@ export const Contact = () =>{
                                 className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
                                 />
                             </div>
+
+                            <div>
+                                <label
+                                htmlFor="message"
+                                className="block text-sm font-medium mb-2"
+                                >
+                                    Message
+                                </label>
+                                <textarea
+                                rows={5}
+                                required
+                                value={formData.message}
+                                onChange={(e) =>
+                                    setFormData({ ...formData, message: e.target.value })
+                                }
+                                placeholder="Your message..."
+                                className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none"
+                                />
+                            </div>
                         </form>
                     </div>
                 </div>
