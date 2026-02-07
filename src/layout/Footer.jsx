@@ -16,9 +16,14 @@ const footerLinks = [
 export const Footer = () =>{
     return(
         <footer>
-            <div>
-                <div>
-
+            <div className="py-12 border-t border-border">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+                    {/* Logo & COpyright */}
+                    <div className="text-center md:text-left">
+                        <a href="#" className="text-xl font-bold tracking-light">
+                            PM<span className="text-primary">.</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
