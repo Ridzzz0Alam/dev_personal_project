@@ -14,6 +14,7 @@ const footerLinks = [
 ]
 
 export const Footer = () =>{
+    const currentYear = new Date().getFullYear();
     return(
         <footer>
             <div className="py-12 border-t border-border">
@@ -23,6 +24,9 @@ export const Footer = () =>{
                         <a href="#" className="text-xl font-bold tracking-light">
                             PM<span className="text-primary">.</span>
                         </a>
+                        <p>
+                            {currentYear} Ridwan Alam. All rights reserved.
+                        </p>
                     </div>
                 </div>
             </div>
