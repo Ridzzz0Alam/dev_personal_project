@@ -1,6 +1,7 @@
-import { AlertCircle, CheckCircle, Mail, MapPin, Phone } from "lucide-react";
+import { AlertCircle, CheckCircle, Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Button } from "../components/Button";
 
 
 const contactInfo = [
@@ -164,6 +165,21 @@ export const Contact = () =>{
                                 />
                             </div>
 
+                            <Button
+                            className="w-full"
+                            type="submit"
+                            size="lg"
+                            disabled={isLoading}
+                            >
+                                {isLoading ? (
+                                    <>Sending...</>
+                                ) : (
+                                    <>
+                                        Send Message
+                                        <Send className="w-5 h-5"/>
+                                    </>
+                                )}
+                            </Button>
 
                             {submitStatus.type && (
                                 <div
