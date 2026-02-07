@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 
 const contactInfo = [
@@ -66,10 +67,18 @@ export const Contact = () =>{
                 type: "success",
                 message: "Message sent successfully! I'll get back to you soon.",
             });
-            setFormData({name:" ", email: "", error});
-            
+            setFormData({name:" ", email: "", message: ""});
+        } catch(error){
+            console.error("EmailJS error:",error);
+            setSubmitStatus({
+                type: "error",
+                message:
+                error.text || "Failed to send message. Please try again later.",
+            });
+        }finally{
+            setIsLoading(false);
         }
-    }
+    };
     return (
         <section id="contact" className="py-32 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full">
