@@ -164,16 +164,6 @@ export const Contact = () =>{
                                 />
                             </div>
 
-                            <Button>
-                                {isLoading ? (
-                                    <>Sending...</>
-                                ) : (
-                                    <>
-                                        Send Message
-                                        <Send className="w-5 h-5"/>
-                                    </>
-                                )}
-                            </Button>
 
                             {submitStatus.type && (
                                 <div
@@ -189,9 +179,9 @@ export const Contact = () =>{
                                     ) : (
                                         <AlertCircle className="w-5 h-5 flex-shrink-0"/>
                                     )}
+                                    <p className="text-sm">{submitStatus.message}</p>
                                 </div>
                             )}
-
                         </form>
                     </div>
                 </div>
