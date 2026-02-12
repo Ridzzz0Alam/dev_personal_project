@@ -175,7 +175,8 @@ export const Contact = () =>{
                                     <>Sending...</>
                                 ) : (
                                     <>
-                                        <Send className="w-5 h-5"/> Send Message
+                                        Send Message
+                                        <Send className="w-5 h-5"/> 
                                     </>
                                 )}
                             </Button>
